@@ -1,3 +1,38 @@
 body{
     background-color: rgb(13,17,23);
 }
+#pfp{
+    width: 155px;
+    border-radius: 50%;
+}
+#Profile{
+    display: flex;
+    justify-content: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-direction: column;
+    color: white;
+    margin-right: 490px;
+}
+#username{
+    font-weight: lighter;
+    font-size: 20px;
+    color: gray;
+}
+#opening{
+    font-size: 14px;
+}
+button{
+    background-color:rgb(33,39,44);
+    border-end-end-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-end-start-radius: 10px;
+    color: white;
+    border: none;
+}
+#buttonimg{
+    width: 60px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+}
