@@ -10,21 +10,15 @@
     <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
-  <div id="mainpage">
     <nav>
       <div class="navbar">
 
-        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Overview</a>
-        <a href="#" id="Repositories"><i class="fa fa-fw fa-search"></i> Repositories</a>
-        
+        <a class="active" href="#" id="overview">Overview</a>
+        <a href="#" id="Repositories"> Repositories</a>
+        <a href="#" id="projects"> Projects</a>
+        <a href="#" id="packages"> Packages</a>
     </div>
 </nav>
-  </div>
-
-    <title>Github</title>
-  </head>
-  <body>
-
 
     <div id="Profile"></div>
     <div id="topBox"></div>
@@ -35,8 +29,9 @@
       crossorigin="anonymous"
     ></script>
 
-<script src="main.js"></script>
-<script src="overview.js"></script>
-<script src="repo.js"></script>
+<script type="module" src="scripts/main.js"></script>
+<script type="module" src="overview.js"></script>
+<script type="module" src="repo.js"></script>
+  </body>
   <footer id="footer"></footer>
 </html>
