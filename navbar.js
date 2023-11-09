@@ -1,3 +1,6 @@
+import { topDomString } from "/overview.js";
+import { bottomDomString } from "/overview.js";
+
 const overviewLink = document.querySelector('#overview');
 const repositoriesLink = document.querySelector('#Repositories');
 const projectsLink = document.querySelector('#projects');
