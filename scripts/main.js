@@ -4,7 +4,7 @@ import { newProjectForm } from "../components/new_projects_form.js";
 const Profile = document.querySelector("#Profile");
 
 const bottomDiv = "#bottomBox";
-
+// hi
 Profile.innerHTML = `
 <img
 id="pfp"
