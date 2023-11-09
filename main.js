@@ -16,6 +16,42 @@ for React JS developers.</div>
 <button><img id="buttonimg" src="Images/followbutton.png" alt=""></button>
 <button><img id="buttonimg" src="Images/sponsorbutton.png" alt=""></button>
 <button>...</button>
-</div>`;
+</div>
+
+<div>
+<img
+  id="icons"
+  src="Images/followersicon.png"
+  alt="image of follower icon"
+/>
+1.8k followers ·27 following
+<img id="icons" src="Images/staricon.png" alt="star icon" />329
+</div>
+<div>
+<h2 id="socials">
+  <img id="icons" src="Images/location icon.png" alt="" />New York, New
+  York
+</h2>
+<h2 id="socials"><img id="icons" src="Images/mailicon.png" alt="">thanos@lostboi.com</h2>
+<h2 id="socials"><img id="icons" src="Images/twittericon.png" alt="">@l0stboi</h2>
+<div  id="breakline"></div>
+</div>
+<div id="highlights">Highlights
+<h2 id="socials"><img id="icon
+  " src="Images/star2icon.png" alt=""> Artic code Vauilt Contributor</h2>
+<h2 id="socials"> <img id="icon
+  " src="Images/star3 icon.png" alt="">Github</h2></div>
+  <img
+  src="Images/star pro.png" alt=""></h2>
+<div  id="breakline"></div>
+<div >Organazations </br><img id="organazations" src="Images/orgs.png" alt="">
+
+
+</div>
+<div  id="breakline"></div>
+<div >Sponsors </br>
+<img id="sponsors" src="Images/sponsorss.png" alt="">
+</div>
+`;
 
 body.appendChild(Profile);
