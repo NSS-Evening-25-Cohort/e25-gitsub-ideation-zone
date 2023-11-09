@@ -1,5 +1,5 @@
 export const newProjectForm = `<div>
-  <div class="container mt-5">
+  <div class="projectform container mt-5">
     <div class="bg-dark text-light p-5">
       <h2>Create a new project</h2>
       <p class="text-secondary">
@@ -27,10 +27,10 @@ export const newProjectForm = `<div>
             class="form-control"
             id="projectDescription"
             rows="3"
-            placeholder="Visit Github to see how they do this"
+            placeholder="description"
           ></textarea>
         </div>
-        <button type="submit" class="btn btn-success">
+        <button type="submit" class="submitproject btn btn-success">
           Create project
         </button>
       </form>
