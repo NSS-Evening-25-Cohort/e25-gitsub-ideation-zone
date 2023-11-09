@@ -59,3 +59,13 @@ font-size: small;
 #sponsors{
     width: 200px;
 }
+#container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#mainpage{
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+}
