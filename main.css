@@ -12,7 +12,8 @@ body{
     margin-top: 30px;
     flex-direction: column;
     color: white;
-    margin-right: 490px;
+    align-items: flex-start;
+
 }
 #username{
     font-weight: lighter;
@@ -21,6 +22,7 @@ body{
 }
 #opening{
     font-size: 14px;
+    width: 12rem;
 }
 button{
     background-color:rgb(33,39,44);
@@ -35,4 +37,25 @@ button{
     width: 60px;
     margin-left: 2px;
     margin-bottom: 2px;
+}
+#icons{
+    width: 30px;
+}
+#socials{
+font-size: small;
+}
+#breakline{
+    border-bottom: solid;
+    color: rgb(33,39,44);
+    size: small;
+}
+#highlights{
+    margin-left: -4px;
+    
+}
+#organazations{
+    width: 200px;
+}
+#sponsors{
+    width: 200px;
 }
