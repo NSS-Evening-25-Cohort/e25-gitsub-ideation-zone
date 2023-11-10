@@ -1,5 +1,5 @@
 
-export const bottomDomString = `    <div>
+export let bottomDomString = `    <div>
 <div class="container mt-5">
   <div class="bg-dark text-light p-5">
     <h2>Create a Pinned Repo</h2>
@@ -39,7 +39,7 @@ export const bottomDomString = `    <div>
 </div>
 </div>`
 
-export const topDomString= `
+export let topDomString= `
     <div class="container mt-5">
       <div class="bg-dark text-light p-5">
     <div class="repo-card">
