@@ -1,4 +1,4 @@
-// create form to add repository cards to page - bottomBox
+// create form to add repository cards to page - bottomBox.
 // Form:  name, description, bottom row of type/star/forks/updated last
 TODO: `<form>
   <div class="mb-3">
