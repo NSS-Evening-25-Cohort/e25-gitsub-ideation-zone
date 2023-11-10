@@ -1,5 +1,5 @@
-import { topDomString } from "/overview.js";
-import { bottomDomString } from "/overview.js";
+
+export const navClickFunction = (topDomString, bottomDomString) => {
 
 const overviewLink = document.querySelector('#overview');
 const repositoriesLink = document.querySelector('#Repositories');
@@ -19,6 +19,11 @@ overviewLink.addEventListener('click', (e) => {
 
   bottomBox.innerHTML = bottomDomString;
 
+  // renderToDom(topBox, topDomString);
+
+  // renderToDom(bottomBox, bottomDomString);
+
+
 
   repositoriesLink.classList.remove('active');
   packagesLink.classList.remove('active');
@@ -26,3 +31,4 @@ overviewLink.addEventListener('click', (e) => {
   overviewLink.classList.add('active');
 
 })
+};

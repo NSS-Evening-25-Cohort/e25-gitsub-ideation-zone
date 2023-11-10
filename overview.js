@@ -1,5 +1,11 @@
+import { navClickFunction } from "/navbar.js";
+import { repos } from "/data.js";
 
-export let bottomDomString = `    <div>
+
+
+const bottomOverviewString = 
+
+`    <div>
 <div class="container mt-5">
   <div class="bg-dark text-light p-5">
     <h2>Create a Pinned Repo</h2>
@@ -9,7 +15,7 @@ export let bottomDomString = `    <div>
     </p>
     <hr class="text-secondary" />
     <form>
-      <div class="mb-3">
+      <div class="repoName">
         <label for="projectName" class="form-label">
           Project board name
         </label>
@@ -20,7 +26,7 @@ export let bottomDomString = `    <div>
           placeholder="Example 2"
         />
       </div>
-      <div class="mb-3">
+      <div class="repoDescription">
         <label for="projectDescription" class="form-label">
           Description (optional)
         </label>
@@ -39,12 +45,13 @@ export let bottomDomString = `    <div>
 </div>
 </div>`
 
-export let topDomString= `
+const topOverviewString = 
+`
     <div class="container mt-5">
       <div class="bg-dark text-light p-5">
     <div class="repo-card">
         <div class="repo-header">
-            <h3>Repository Name</h3>
+            <h3>${repos.name}</h3>
             <a href="https://github.com/yourusername/repo-name" class="repo-link">View on GitHub</a>
         </div>
         <p>Repository description goes here. This is a sample description of the pinned repository.</p>
@@ -58,3 +65,23 @@ export let topDomString= `
     </div>
   </div>
     `
+
+    navClickFunction(topOverviewString, bottomOverviewString);
+
+    form.addEventListener('submit',  (event) => {
+  event.preventDefault()
+  
+    const newPinnedRepo ={
+      id: repos.length +1,
+      name: document.querySelector("#repoName").value,
+      description: document.querySelector("#repoDescription").value,
+      script: document.querySelector('input[name="type"]:checked').id,
+      stars:  Math.floor(Math.random() * (999 - 100) ) + 100,
+      forks:  Math.floor(Math.random() * (999 - 100) ) + 100
+    }
+
+    repos.push(newPinnedRepo)
+    renderToDom(repos)
+    form.reset()
+
+  })
