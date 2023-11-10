@@ -4,7 +4,7 @@ import { newProjectForm } from "../components/new_projects_form.js";
 const Profile = document.querySelector("#Profile");
 
 const bottomDiv = "#bottomBox";
-// hi again
+
 Profile.innerHTML = `
 <img
 id="pfp"
@@ -48,6 +48,8 @@ for React JS developers.</div>
   src="Images/star pro.png" alt=""></h2>
 <div  id="breakline"></div>
 <div >Organazations </br><img id="organazations" src="Images/orgs.png" alt="">
+
+
 </div>
 <div  id="breakline"></div>
 <div >Sponsors </br>
