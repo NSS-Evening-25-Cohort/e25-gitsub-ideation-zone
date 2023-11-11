@@ -1,10 +1,15 @@
+import { renderToDom } from "./renderToDom.js";
+import { addNewProjects } from "../components/projects_cards.js";
+
 // Inside projectFormHandler.js in the utils folder
 // projectFormHandler.js
 export const projectArray = [];
 
 export function attachCreateProjectEvent() {
   //Now that we have rendered our HTML component, we can target it by its ID or class. In this case, I've targeted the 'Create project' button.
+
   const createProjectButton = document.querySelector(".btn-success");
+  const topDivId = "#topBox";
 
   createProjectButton.addEventListener("click", function (e) {
     e.preventDefault();
@@ -24,10 +29,40 @@ export function attachCreateProjectEvent() {
       description: projectDescription,
     };
     projectArray.push(ProjectObject);
-    console.log(projectArray);
 
     // Clear the form fields by resetting the form
     document.querySelector("form").reset();
+    console.log(projectArray);
+    // renderToDom(topDivId, projectsCards);
+    // const renderCards = (array) => {
+    let refStuff = `<div class="container mt-3">
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search all projects"
+            ></input>
+          </div>
+          <div class="col-auto">
+            <a href="#" class="btn btn-link">
+              3 Open
+            </a>{" "}
+            /
+            <a href="#" class="btn btn-link">
+              0 Closed
+            </a>
+          </div>
+        </div>
+      </div>`;
+
+    projectArray.forEach((item) => {
+      refStuff += addNewProjects(item);
+    });
+    renderToDom(topDivId, refStuff);
+    // }
   });
 
   return projectArray;
