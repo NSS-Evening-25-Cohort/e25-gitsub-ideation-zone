@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import { navClickFunction } from "/navbar.js";
 import { repos } from "/data.js";
 // import { renderToDom } from "../utils/renderToDom.js";
@@ -80,15 +79,6 @@ repos.map((object, index) => {
     </div>
       </div>
     </div>
-=======
-// create form to add repository cards to page - bottomBox.
-// Form:  name, description, bottom row of type/star/forks/updated last
-TODO: `<form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
->>>>>>> 96ac62c0ed0e48e97ae45ec8f25d1be8e6b445d4
   </div>
     `})
     topOverviewBox.innerHTML = domString
@@ -100,7 +90,7 @@ const overviewLink = document.querySelector('#overview');
 const repositoriesLink = document.querySelector('#Repositories');
 const projectsLink = document.querySelector('#projects');
 const packagesLink = document.querySelector('#packages');
-
+// const clickedLink = document.querySelectorAll("#navbarButtons")
 
 const topOverviewBox = document.querySelector('#topBox');
 const bottomOverviewBox = document.querySelector('#bottomBox');
@@ -128,7 +118,6 @@ bottomOverviewBox.innerHTML =
       </button>
     </form>
   </div>
-<<<<<<< HEAD
 </div>`
 ;
 
@@ -136,7 +125,7 @@ topOverviewBox.innerHTML = renderedArray(repos);
 
 repositoriesLink.classList.remove('active');
 packagesLink.classList.remove('active');
-projectsLink.classList.remove('active');
+clickedLink.classList.remove('active');
 overviewLink.classList.add('active');
 
 })
@@ -144,16 +133,3 @@ overviewLink.classList.add('active');
 ;
 
 // navClickFunction(topOverviewString, bottomOverviewString);
-=======
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>`;
-
-// render pinned repo cards to page - topBox
-
-// TODO: // stretch - delete pins
-// TODO: // stretch - about me square
->>>>>>> 96ac62c0ed0e48e97ae45ec8f25d1be8e6b445d4

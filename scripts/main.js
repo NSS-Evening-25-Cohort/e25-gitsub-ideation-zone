@@ -64,7 +64,7 @@ for React JS developers.</div>
 
 // body.appendChild(Profile);
 
-renderToDom(bottomDiv, newProjectForm);
+// renderToDom(bottomDiv, newProjectForm);
 
 //  Now you can call the function to attach the event
-attachCreateProjectEvent();
+// attachCreateProjectEvent();
