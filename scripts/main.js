@@ -62,7 +62,7 @@ for React JS developers.</div>
 </div>
 `;
 
-// body.appendChild(Profile);
+//body.appendChild(Profile);
 
 // renderToDom(bottomDiv, newProjectForm);
 

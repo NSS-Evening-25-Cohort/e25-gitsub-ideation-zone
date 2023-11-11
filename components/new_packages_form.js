@@ -1,16 +1,15 @@
-export const newProjectForm = `<div>
-  <div class="projectform container mt-5">
+export const newPackageForm = `<div>
+  <div class="packageform container mt-5">
     <div class="bg-dark text-light p-5">
-      <h2>Create a new project</h2>
+      <h2>Create a new Package</h2>
       <p class="text-secondary">
-        Coordinate, track, and update your work in one place, so projects stay
-        transparent and on schedule.
+      Manage private or public packages next to your source code.
       </p>
       <hr class="text-secondary" />
       <form>
         <div class="mb-3">
-          <label for="projectName" class="form-label">
-            Project board name
+          <label for="packageName" class="form-label">
+            Package Name
           </label>
           <input
             type="text"
@@ -20,21 +19,20 @@ export const newProjectForm = `<div>
           />
         </div>
         <div class="mb-3">
-          <label for="projectDescription" class="form-label">
+          <label for="packageDescription" class="form-label">
             Description (optional)
           </label>
           <textarea
             class="form-control"
-            id="projectDescription"
+            id="packageDescription"
             rows="3"
             placeholder="description"
           ></textarea>
         </div>
         <button type="submit" class="submitproject btn btn-success">
-          Create project
+          Create New Package
         </button>
       </form>
     </div>
   </div>
 </div>`;
-
