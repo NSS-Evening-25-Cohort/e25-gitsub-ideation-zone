@@ -12,8 +12,7 @@ body{
     margin-top: 30px;
     flex-direction: column;
     color: white;
-    align-items: flex-start;
-
+    margin-right: 490px;
 }
 #username{
     font-weight: lighter;
@@ -22,7 +21,6 @@ body{
 }
 #opening{
     font-size: 14px;
-    width: 12rem;
 }
 button{
     background-color:rgb(33,39,44);
@@ -32,40 +30,4 @@ button{
     border-end-start-radius: 10px;
     color: white;
     border: none;
-}
-#buttonimg{
-    width: 60px;
-    margin-left: 2px;
-    margin-bottom: 2px;
-}
-#icons{
-    width: 30px;
-}
-#socials{
-font-size: small;
-}
-#breakline{
-    border-bottom: solid;
-    color: rgb(33,39,44);
-    size: small;
-}
-#highlights{
-    margin-left: -4px;
-    
-}
-#organazations{
-    width: 200px;
-}
-#sponsors{
-    width: 200px;
-}
-#container{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-#mainpage{
-    display: flex;
-    justify-content: right;
-    flex-direction: column;
 }
