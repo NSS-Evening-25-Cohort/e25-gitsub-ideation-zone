@@ -62,7 +62,7 @@ const renderedArray = () => {
 repos.map((object, index) => {
   domString +=  
 `
-    <div id="pinnedRepoCard" class="card mt-5" style="max-width: 540px;">
+    <div id="pinnedRepoCard" class="card mt-5" style="max-width: 405px;">
       <div class="bg-dark text-light p-5">
     <div class="repo-card">
         <div class="repo-header">
@@ -81,7 +81,7 @@ repos.map((object, index) => {
     </div>
   </div>
     `})
-    topBox.innerHTML = domString
+    topOverviewBox.innerHTML = domString
     renderedArray(repos)
 }
 
@@ -92,32 +92,36 @@ const projectsLink = document.querySelector('#projects');
 const packagesLink = document.querySelector('#packages');
 
 
-const topBox = document.getElementById('topBox');
-const bottomBox = document.getElementById('bottomBox');
+const topOverviewBox = document.querySelector('#topBox');
+const bottomOverviewBox = document.querySelector('#bottomBox');
 
 
 overviewLink.addEventListener('click', (e) => {
 
-  e.preventDefault()
+e.preventDefault()
 
 
-topBox.innerHTML = renderedArray(repos)
 
-bottomBox.innerHTML =
-`
-<div id="pinnedRepoForm" class="container mt-5">
+
+bottomOverviewBox.innerHTML =
+`<div id="pinnedRepoForm" class="container mt-5" style="max-width: 841px;">
   <div class="bg-dark text-light p-5">
     <form>
-    
+    <select class="form-select" aria-label="Default select example">
+  <option selected>Choose Repo to Pin</option>
+  <option value="1">${repos.name}</option>
+  <option value="2">${repos.name}</option>
+  <option value="3">${repos.name}</option>
+</select>
       <button type="submit" class="btn btn-success">
         Pin Repository
       </button>
     </form>
   </div>
 </div>`
+;
 
-
-
+topOverviewBox.innerHTML = renderedArray(repos);
 
 repositoriesLink.classList.remove('active');
 packagesLink.classList.remove('active');

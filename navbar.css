@@ -6,6 +6,7 @@
 justify-content: top;
 }
 
+
 .navbar a {
   text-align: center;
   text-decoration: none;
@@ -27,11 +28,15 @@ justify-content: top;
   color: white;
 }
 
+#topBox {
+ display: flex;
+ /* flex-basis: 50%; */
+ flex-wrap: wrap; */
+ /* padding: 9px; */
+}
 
 #pinnedRepoCard {
-  width: 200px;
-  height: 120px;
-  display: flex;
-  flex-basis: 50%;
-  flex-wrap: wrap;
+  width: 100%;
+  margin: 5px;
+  background-color: rgb(13,17,23);
 }
