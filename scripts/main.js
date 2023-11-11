@@ -26,7 +26,6 @@ for React JS developers.</div>
 <button><img id="buttonimg" src="Images/sponsorbutton.png" alt=""></button>
 <button>...</button>
 </div>
-
 <div>
 <img
   id="icons"
@@ -63,10 +62,9 @@ for React JS developers.</div>
 </div>
 `;
 
-
 // body.appendChild(Profile);
 
-renderToDom(bottomDiv, newProjectForm);
+// renderToDom(bottomDiv, newProjectForm);
 
 //  Now you can call the function to attach the event
-attachCreateProjectEvent();
+// attachCreateProjectEvent();
