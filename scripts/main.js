@@ -1,5 +1,10 @@
 import { renderToDom } from "../utils/renderToDom.js";
 import { newProjectForm } from "../components/new_projects_form.js";
+// Inside main.js in the script folder
+import {
+  projectArray,
+  attachCreateProjectEvent,
+} from "../utils/projectFormHandler.js";
 
 const Profile = document.querySelector("#Profile");
 
@@ -63,4 +68,5 @@ for React JS developers.</div>
 
 renderToDom(bottomDiv, newProjectForm);
 
-document.querySelector("#bottomBox").innerHTML = newProjectForm;
+//  Now you can call the function to attach the event
+attachCreateProjectEvent();

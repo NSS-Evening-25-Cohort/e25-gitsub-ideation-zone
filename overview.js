@@ -1,6 +1,6 @@
-TODO: // create form to add repository cards to page - bottomBox
+// create form to add repository cards to page - bottomBox.
 // Form:  name, description, bottom row of type/star/forks/updated last
-`<form>
+TODO: `<form>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -15,12 +15,9 @@ TODO: // create form to add repository cards to page - bottomBox
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>`
+</form>`;
 
-TODO: // render pinned repo cards to page - topBox 
+// render pinned repo cards to page - topBox
 
-
-
-
-TODO: // stretch - delete pins
-TODO: // stretch - about me square
+// TODO: // stretch - delete pins
+// TODO: // stretch - about me square
