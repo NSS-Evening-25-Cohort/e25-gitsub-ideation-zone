@@ -26,22 +26,17 @@ const repos = [
 ];
 
 
-const repositoriespage = document.querySelector("#Repositories");
+const repositoriespage = document.querySelector("#repositories");
 const overviewLink = document.querySelector(".active");
 
- 
-const topBox = document.getElementById("topBox");
+const topBox = "#topBox";
+const bottomBox = "#bottomBox";
 
- 
-repositoriespage.addEventListener("click", function (event) {
- 
-  event.preventDefault();
-
- 
-  let domstring = "";
+const renderRepositories = (repos) => {
+  let domString = "";
 
   for (const repo of repos) {
-    domstring += `
+    domString += `
       <div class="card" style="width: 29rem;background-color: rgb(13,17,23);color:rgb(139,148,158); border-bottom: solid  rgb(33,39,44);">
         <div class="card-body">
           <a href="">${repo.reponame}</a>
@@ -50,19 +45,13 @@ repositoriespage.addEventListener("click", function (event) {
       </div>`;
   }
 
-  topBox.innerHTML = domstring;
+  renderToDom(topBox, domString);
+};
 
-   repositoriespage.classList.add("active");
-  overviewLink.classList.remove("active");
-});
-
-const bottombox = document.querySelector("#bottomBox");
-
-repositoriespage.addEventListener("click", function (event) {
-  event.preventDefault();
-  bottombox.innerHTML = `
+const renderCreateRepoForm = () => {
+  const formHTML = `
     <form id="repoForm">
-      <div class="mb-3" >
+      <div class="mb-3">
         <label for="repo name" class="form-label">Create a new repository</label>
         <input type="text" class="form-control" id="reponame" aria-describedby="textHelp" placeholder=" ">
       </div>
@@ -73,10 +62,22 @@ repositoriespage.addEventListener("click", function (event) {
       <button type="submit" class="btn btn-success" style="margin-top:10px;">Create repository</button>
     </form>`;
 
-  const form = document.getElementById("repoForm");
+  renderToDom(bottomBox, formHTML);
+};
 
+const renderPage = () => {
+  repositoriespage.classList.add("active");
+  overviewLink.classList.remove("active");
+
+  repositoriespage.addEventListener("click", function (event) {
+    event.preventDefault();
+    renderRepositories(repos);
+    renderCreateRepoForm();
+  });
+
+  const form = document.getElementById("repoForm");
   form.addEventListener("submit", createrepo);
-});
+};
 
 const createrepo = (e) => {
   e.preventDefault();
@@ -88,18 +89,9 @@ const createrepo = (e) => {
 
   repos.push(newrepo);
 
-  let domstring = "";
-
-  for (const repo of repos) {
-    domstring += `
-      <div class="card" style="width: 29rem;background-color: rgb(13,17,23);color:rgb(139,148,158); border-bottom: solid  rgb(33,39,44);">
-        <div class="card-body">
-          <a href="">${repo.reponame}</a>
-          <p class="card-text">${repo.description}</p>
-        </div>
-      </div>`;
-  }
-
-  topBox.innerHTML = domstring;
+  renderRepositories(repos);
   form.reset();
 };
+
+
+renderPage();
