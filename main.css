@@ -12,8 +12,7 @@ body{
     margin-top: 30px;
     flex-direction: column;
     color: white;
-    align-items: flex-start;
-
+    margin-right: 490px;
 }
 #username{
     font-weight: lighter;
@@ -22,7 +21,6 @@ body{
 }
 #opening{
     font-size: 14px;
-    width: 12rem;
 }
 button{
     background-color:rgb(33,39,44);
