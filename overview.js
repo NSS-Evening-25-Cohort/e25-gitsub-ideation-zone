@@ -1,87 +1,131 @@
-import { navClickFunction } from "/navbar.js";
+// import { navClickFunction } from "/navbar.js";
 import { repos } from "/data.js";
+// import { renderToDom } from "../utils/renderToDom.js";
+
+const form = document.querySelector("#overviewForm")
 
 
 
-const bottomOverviewString = 
 
-`    <div>
-<div class="container mt-5">
-  <div class="bg-dark text-light p-5">
-    <h2>Create a Pinned Repo</h2>
-    <p class="text-secondary">
-      Coordinate, track, and update your work in one place, so projects stay
-      transparent and on schedule.
-    </p>
-    <hr class="text-secondary" />
-    <form>
-      <div class="repoName">
-        <label for="projectName" class="form-label">
-          Project board name
-        </label>
-        <input
-          type="text"
-          class="form-control"
-          id="projectName"
-          placeholder="Example 2"
-        />
-      </div>
-      <div class="repoDescription">
-        <label for="projectDescription" class="form-label">
-          Description (optional)
-        </label>
-        <textarea
-          class="form-control"
-          id="projectDescription"
-          rows="3"
-          placeholder="Visit Github to see how they do this"
-        ></textarea>
-      </div>
-      <button type="submit" class="btn btn-success">
-        Create project
-      </button>
-    </form>
-  </div>
-</div>
-</div>`
+// const renderToTop = (array) => {
 
-const topOverviewString = 
+//   let domString = ""
+
+// array.map((object, index) => {
+//   domString +=  
+// `
+//     <div id="pinnedRepoCard" class="container mt-5">
+//       <div class="bg-dark text-light p-5">
+//     <div class="repo-card">
+//         <div class="repo-header">
+//             <h3>${object.name}</h3>
+//             <a href="https://github.com/yourusername/repo-name" class="repo-link">View on GitHub</a>
+//         </div>
+//         <p>Repository description goes here. This is a sample description of the pinned repository.</p>
+//         <div class="repo-stats">
+//             <span>type</span>
+//             <span>Stars: 100</span>
+//             <span>Forks: 50</span>
+//             <button type ="button" class="btn btn-danger" id="delete--${index}" >delete</button>
+//         </div>
+//     </div>
+//       </div>
+//     </div>
+//   </div>
+//     `})
+//     topBox.innerHTML = domString
+// }
+
+
+// form.addEventListener('submit',  (event) => {
+//   event.preventDefault()
+//   console.log('clicked')
+//     const newPinnedRepo ={
+//       id: repos.length +1,
+//       name: document.querySelector("#projectName").value,
+//       description: document.querySelector("#projectDescription").value,
+//       script: document.querySelector('input[name="type"]:checked').id,
+//       stars:  Math.floor(Math.random() * (999 - 100) ) + 100,
+//       forks:  Math.floor(Math.random() * (999 - 100) ) + 100
+//     }
+
+//     repos.push(newPinnedRepo)
+//     renderToTop(repos)
+//     form.reset()
+
+// //   })
+// const navClickFunction = (topDomString, bottomDomString) => {
+
+const renderedArray = () => {
+  let domString = ""
+
+repos.map((object, index) => {
+  domString +=  
 `
-    <div class="container mt-5">
+    <div id="pinnedRepoCard" class="card mt-5" style="max-width: 540px;">
       <div class="bg-dark text-light p-5">
     <div class="repo-card">
         <div class="repo-header">
-            <h3>${repos.name}</h3>
+            <h3>${object.name}</h3>
             <a href="https://github.com/yourusername/repo-name" class="repo-link">View on GitHub</a>
         </div>
-        <p>Repository description goes here. This is a sample description of the pinned repository.</p>
+        <p>${object.description}</p>
         <div class="repo-stats">
             <span>type</span>
-            <span>Stars: 100</span>
-            <span>Forks: 50</span>
+            <span>${object.stars}</span>
+            <span>${object.forks}</span>
+            <button type ="button" class="btn btn-danger" id="delete--${index}" >delete</button>
         </div>
     </div>
       </div>
     </div>
   </div>
-    `
+    `})
+    topBox.innerHTML = domString
+    renderedArray(repos)
+}
 
-    navClickFunction(topOverviewString, bottomOverviewString);
 
-    form.addEventListener('submit',  (event) => {
-  event.preventDefault()
-  
-    const newPinnedRepo ={
-      id: repos.length +1,
-      name: document.querySelector("#repoName").value,
-      description: document.querySelector("#repoDescription").value,
-      script: document.querySelector('input[name="type"]:checked').id,
-      stars:  Math.floor(Math.random() * (999 - 100) ) + 100,
-      forks:  Math.floor(Math.random() * (999 - 100) ) + 100
-    }
+const overviewLink = document.querySelector('#overview');
+const repositoriesLink = document.querySelector('#Repositories');
+const projectsLink = document.querySelector('#projects');
+const packagesLink = document.querySelector('#packages');
 
-    repos.push(newPinnedRepo)
-    renderToDom(repos)
-    form.reset()
 
-  })
+const topBox = document.getElementById('topBox');
+const bottomBox = document.getElementById('bottomBox');
+
+
+overviewLink.addEventListener('click', (e) => {
+
+  e.preventDefault()
+
+
+topBox.innerHTML = renderedArray(repos)
+
+bottomBox.innerHTML =
+`
+<div id="pinnedRepoForm" class="container mt-5">
+  <div class="bg-dark text-light p-5">
+    <form>
+    
+      <button type="submit" class="btn btn-success">
+        Pin Repository
+      </button>
+    </form>
+  </div>
+</div>`
+
+
+
+
+repositoriesLink.classList.remove('active');
+packagesLink.classList.remove('active');
+projectsLink.classList.remove('active');
+overviewLink.classList.add('active');
+
+})
+
+;
+
+// navClickFunction(topOverviewString, bottomOverviewString);

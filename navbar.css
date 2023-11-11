@@ -28,9 +28,10 @@ justify-content: top;
 }
 
 
-/* @media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-} */
+#pinnedRepoCard {
+  width: 200px;
+  height: 120px;
+  display: flex;
+  flex-basis: 50%;
+  flex-wrap: wrap;
+}
