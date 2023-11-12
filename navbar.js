@@ -11,6 +11,7 @@ document.querySelector(".navbar").addEventListener("click", (e) => {
     console.log("Project link clicked");
     renderToDom(bottomDiv, newProjectForm);
     attachCreateProjectEvent();
+    // next if statement
   } else {
     console.log("Other link in navbar clicked");
   }
