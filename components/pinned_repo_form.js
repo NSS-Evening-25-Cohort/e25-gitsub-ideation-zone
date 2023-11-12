@@ -1,4 +1,4 @@
-const pinnedRepoForm = `<div id="pinnedRepoForm" class="container mt-5" style="max-width: 841px;">
+export const pinnedRepoForm = `<div id="pinnedRepoForm" class="container mt-5" style="max-width: 841px;">
 <div class="bg-dark text-light p-5">
   <form>
   <select class="form-select" aria-label="Default select example">
@@ -13,3 +13,4 @@ const pinnedRepoForm = `<div id="pinnedRepoForm" class="container mt-5" style="m
   </form>
 </div>
 </div>`
+;

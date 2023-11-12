@@ -1,5 +1,5 @@
 // Select the "Repositories" link
-const repositoriesLink = document.querySelector('#Repositories');
+const repositoriesLink = document.querySelector('#repositories');
 const overviewLink = document.querySelector('.active');
 
 // Select the topBox element where you want to send the content

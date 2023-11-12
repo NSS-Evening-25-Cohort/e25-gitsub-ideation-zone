@@ -1,7 +1,8 @@
 // import { navClickFunction } from "/navbar.js";
 import { repos } from "/data.js";
+import { navigateTo } from "./navbar.js"
 // import { renderToDom } from "../utils/renderToDom.js";
-
+// import { pinnedRepoForm } from "../components/pinned_repo_form.js";
 const form = document.querySelector("#overviewForm")
 
 
@@ -56,6 +57,7 @@ const form = document.querySelector("#overviewForm")
 // //   })
 // const navClickFunction = (topDomString, bottomDomString) => {
 
+
 const renderedArray = () => {
   let domString = ""
 
@@ -86,22 +88,20 @@ repos.map((object, index) => {
 }
 
 
+
+
 const overviewLink = document.querySelector('#overview');
-const repositoriesLink = document.querySelector('#Repositories');
-const projectsLink = document.querySelector('#projects');
-const packagesLink = document.querySelector('#packages');
-// const clickedLink = document.querySelectorAll("#navbarButtons")
+// const repositoriesLink = document.querySelector('#Repositories');
+// const projectsLink = document.querySelector('#projects');
+// const packagesLink = document.querySelector('#packages');
 
 const topOverviewBox = document.querySelector('#topBox');
 const bottomOverviewBox = document.querySelector('#bottomBox');
 
 
-overviewLink.addEventListener('click', (e) => {
+// overviewLink.addEventListener('click', (e) => {
 
-e.preventDefault()
-
-
-
+// e.preventDefault()
 
 bottomOverviewBox.innerHTML =
 `<div id="pinnedRepoForm" class="container mt-5" style="max-width: 841px;">
@@ -123,13 +123,17 @@ bottomOverviewBox.innerHTML =
 
 topOverviewBox.innerHTML = renderedArray(repos);
 
-repositoriesLink.classList.remove('active');
-packagesLink.classList.remove('active');
-clickedLink.classList.remove('active');
-overviewLink.classList.add('active');
+// repositoriesLink.classList.remove('active');
+// packagesLink.classList.remove('active');
+// projectsLink.classList.remove('active');
+// overviewLink.classList.add('active');
 
-})
+// })
 
-;
-
+// ;
 // navClickFunction(topOverviewString, bottomOverviewString);
+overviewLink.addEventListener('click', (e) => {
+
+e.preventDefault()
+navigateTo("#overview")
+});
