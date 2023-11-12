@@ -12,4 +12,4 @@ const pinnedRepoForm = `<div id="pinnedRepoForm" class="container mt-5" style="m
     </button>
   </form>
 </div>
-</div>`
+</div>`;
