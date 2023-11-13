@@ -1,71 +1,69 @@
-body{
-    background-color: rgb(13,17,23);
+body {
+  background-color: rgb(13, 17, 23);
 }
-#pfp{
-    width: 155px;
-    border-radius: 50%;
+#pfp {
+  width: 155px;
+  border-radius: 50%;
 }
-#Profile{
-    display: flex;
-    justify-content: left;
-    margin-left: 30px;
-    margin-top: 30px;
-    flex-direction: column;
-    color: white;
-    align-items: flex-start;
-
+#Profile {
+  display: flex;
+  justify-content: left;
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-direction: column;
+  color: white;
+  align-items: flex-start;
 }
-#username{
-    font-weight: lighter;
-    font-size: 20px;
-    color: gray;
+#username {
+  font-weight: lighter;
+  font-size: 20px;
+  color: gray;
 }
-#opening{
-    font-size: 14px;
-    width: 12rem;
+#opening {
+  font-size: 14px;
+  width: 12rem;
 }
-button{
-    background-color:rgb(33,39,44);
-    border-end-end-radius: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-end-start-radius: 10px;
-    color: white;
-    border: none;
+button {
+  background-color: rgb(33, 39, 44);
+  border-end-end-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-end-start-radius: 10px;
+  color: white;
+  border: none;
 }
-#buttonimg{
-    width: 60px;
-    margin-left: 2px;
-    margin-bottom: 2px;
+#buttonimg {
+  width: 60px;
+  margin-left: 2px;
+  margin-bottom: 2px;
 }
-#icons{
-    width: 30px;
+#icons {
+  width: 30px;
 }
-#socials{
-font-size: small;
+#socials {
+  font-size: small;
 }
-#breakline{
-    border-bottom: solid;
-    color: rgb(33,39,44);
-    size: small;
+#breakline {
+  border-bottom: solid;
+  color: rgb(33, 39, 44);
+  size: small;
 }
-#highlights{
-    margin-left: -4px;
-    
+#highlights {
+  margin-left: -4px;
 }
-#organazations{
-    width: 200px;
+#organazations {
+  width: 200px;
 }
-#sponsors{
-    width: 200px;
+#sponsors {
+  width: 200px;
 }
-#container{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+#container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
-#mainpage{
-    display: flex;
-    justify-content: right;
-    flex-direction: column;
-}``
+#mainpage {
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+}

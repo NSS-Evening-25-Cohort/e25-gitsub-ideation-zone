@@ -10,6 +10,7 @@ export function attachCreateProjectEvent() {
 
   const createProjectButton = document.querySelector(".btn-success");
   const topDivId = "#topBox";
+  let refStuff = "";
 
   createProjectButton.addEventListener("click", function (e) {
     e.preventDefault();
@@ -35,14 +36,14 @@ export function attachCreateProjectEvent() {
     console.log(projectArray);
     // renderToDom(topDivId, projectsCards);
     // const renderCards = (array) => {
-    let refStuff = `<div class="container mt-3">
+    refStuff = `<div class="container mt-3">
     <div class="card bg-dark text-light">
       <div class="card-header bg-dark">
         <div class="row">
           <div class="col">
             <input
-              type="text"
-              class="form-control"
+              type="text" id="searchbar"
+              class="searchbar form-control"
               placeholder="Search all projects"
               style="color: white; background-color: black;"
             />
@@ -65,8 +66,105 @@ export function attachCreateProjectEvent() {
       refStuff += addNewProjects(item);
     });
     renderToDom(topDivId, refStuff);
-    // }
+    reinitializeEventListeners();
+  });
+  return refStuff;
+  return projectArray;
+}
+
+function filterProjects(searchInputValue) {
+  return projectArray.filter(
+    (project) =>
+      project.name.toLowerCase().includes(searchInputValue.toLowerCase()) ||
+      project.description.toLowerCase().includes(searchInputValue.toLowerCase())
+  );
+}
+
+// Event listener initialization function
+function initializeSearchBarEventListener() {
+  const searchInput = document.querySelector("#searchbar");
+  if (searchInput) {
+    searchInput.addEventListener("keyup", (e) => {
+      e.preventDefault();
+      const searchInputValue = searchInput.value;
+      if (searchInputValue === "") {
+        renderAllProjects(); // Function to render all projects
+      } else {
+        const filteredProjects = filterProjects(searchInputValue);
+        updateDisplay(filteredProjects); // Function to update display with filtered projects
+      }
+    });
+  }
+}
+
+function updateDisplay(filteredProjects) {
+  let displayContent = `<div class="container mt-3">
+  <div class="card bg-dark text-light">
+    <div class="card-header bg-dark">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text" id="searchbar"
+            class="searchbar form-control"
+            placeholder="Search all projects"
+            style="color: white; background-color: black;"
+          />
+        </div>
+        <div class="col-auto">
+          <a href="#" class="btn btn-link text-light">
+            3 Open
+          </a> /
+          <a href="#" class="btn btn-link text-light">
+            0 Closed
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+  filteredProjects.forEach((project) => {
+    displayContent += addNewProjects(project);
   });
 
-  return projectArray;
+  renderToDom("#topBox", displayContent);
+  reinitializeEventListeners();
+}
+
+function renderAllProjects() {
+  let allProjectsContent = `<div class="container mt-3">
+  <div class="card bg-dark text-light">
+    <div class="card-header bg-dark">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text" id="searchbar"
+            class="searchbar form-control"
+            placeholder="Search all projects"
+            style="color: white; background-color: black;"
+          />
+        </div>
+        <div class="col-auto">
+          <a href="#" class="btn btn-link text-light">
+            3 Open
+          </a> /
+          <a href="#" class="btn btn-link text-light">
+            0 Closed
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+  projectArray.forEach((project) => {
+    allProjectsContent += addNewProjects(project);
+  });
+  renderToDom("#topBox", allProjectsContent);
+  reinitializeEventListeners();
+}
+
+function reinitializeEventListeners() {
+  initializeSearchBarEventListener();
 }
