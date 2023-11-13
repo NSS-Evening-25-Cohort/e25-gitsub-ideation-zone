@@ -5,6 +5,7 @@ import {
   projectArray,
   attachCreateProjectEvent,
 } from "../utils/projectFormHandler.js";
+import { renderOverview } from "/overview.js";
 
 const Profile = document.querySelector("#Profile");
 
@@ -64,7 +65,10 @@ for React JS developers.</div>
 
 //body.appendChild(Profile);
 
-// renderToDom(bottomDiv, newProjectForm);
+renderOverview()
 
 //  Now you can call the function to attach the event
 // attachCreateProjectEvent();
+// const overviewLink = document.querySelector("#overview")
+// console.log("#overview", overviewLink)
+// if (overviewLink)

@@ -1,4 +1,4 @@
-export const newProjectForm = `<div>
+export const newProjectForm = () => {`<div>
   <div class="projectform container mt-5">
     <div class="bg-dark text-light p-5">
       <h2>Create a new project</h2>
@@ -36,5 +36,4 @@ export const newProjectForm = `<div>
       </form>
     </div>
   </div>
-</div>`;
-
+</div>`};
