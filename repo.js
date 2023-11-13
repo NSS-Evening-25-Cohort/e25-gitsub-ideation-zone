@@ -25,7 +25,6 @@ const repos = [
   },
 ];
 
-
 const repositoriespage = document.querySelector("#repositories");
 const overviewLink = document.querySelector(".active");
 
@@ -65,33 +64,32 @@ const renderCreateRepoForm = () => {
   renderToDom(bottomBox, formHTML);
 };
 
-const renderPage = () => {
-  repositoriespage.classList.add("active");
-  overviewLink.classList.remove("active");
+// const renderPage = () => {
+//   repositoriespage.classList.add("active");
+//   overviewLink.classList.remove("active");
 
-  repositoriespage.addEventListener("click", function (event) {
-    event.preventDefault();
-    renderRepositories(repos);
-    renderCreateRepoForm();
-  });
+//   repositoriespage.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     renderRepositories(repos);
+//     renderCreateRepoForm();
+//   });
 
-  const form = document.getElementById("repoForm");
-  form.addEventListener("submit", createrepo);
-};
+//   const form = document.getElementById("repoForm");
+//   form.addEventListener("submit", createrepo);
+// };
 
-const createrepo = (e) => {
-  e.preventDefault();
+// const createrepo = (e) => {
+//   e.preventDefault();
 
-  const newrepo = {
-    reponame: document.getElementById("reponame").value,
-    description: document.getElementById("descriptionrepo").value,
-  };
+//   const newrepo = {
+//     reponame: document.getElementById("reponame").value,
+//     description: document.getElementById("descriptionrepo").value,
+//   };
 
-  repos.push(newrepo);
+//   repos.push(newrepo);
 
-  renderRepositories(repos);
-  form.reset();
-};
+//   renderRepositories(repos);
+//   form.reset();
+// };
 
-
-renderPage();
+// renderPage();
