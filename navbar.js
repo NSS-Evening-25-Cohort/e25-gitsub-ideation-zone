@@ -12,7 +12,14 @@ document.querySelector(".navbar").addEventListener("click", (e) => {
     renderToDom(bottomDiv, newProjectForm);
     attachCreateProjectEvent();
     // next if statement
-  } else {
-    console.log("Other link in navbar clicked");
-  }
+  } else if (e.target.classList.contains("overview")) {
+    console.log("overview navbar clicked");
+    renderOverview();
+  }  else if (e.target.classList.contains("packages")) {
+    console.log("packages navbar clicked");
+   //add render function here
+  } else if (e.target.classList.contains("repositories")) {
+  console.log("repositories navbar clicked");
+  //add render funtion here
+}
 });

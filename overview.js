@@ -1,8 +1,6 @@
 
 import { repos } from "/data.js";
 
-
-
 const form = document.querySelector("#overviewForm")
 
 const topOverviewBox = document.querySelector('#topBox');
@@ -19,13 +17,13 @@ let allRepos = repos
         renderOverview();
     });
 
-const renderOverview = () => {
+export const renderOverview = () => {
   let pinnedRepos = allRepos.filter((repo) => repo.isPinned === true)
   let unPinnedRepos = allRepos.filter(repo => repo.isPinned === false);
   let options = unPinnedRepos.map(repo => `<option value=${repo.id}>${repo.name}</option>`)
 
     bottomOverviewBox.innerHTML = `
-        <div id="pinnedRepoForm" class="mb-3" style="max-width: 841px;">
+        <div id="pinnedRepoForm" class="container mt-5" style="max-width: 841px;">
             <div class="bg-dark text-light p-5">
                 <form id="repoToPinForm">
                     <select class="form-select" aria-label="Default select example">
