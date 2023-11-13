@@ -1,6 +1,7 @@
 import { renderToDom } from "../utils/renderToDom.js";
 import { newProjectForm } from "../components/new_projects_form.js";
 import { attachCreateProjectEvent } from "./utils/projectFormHandler.js";
+import { renderOverview } from "/overview.js";
 
 const topDiv = "#topBox";
 const bottomDiv = "#bottomBox";
