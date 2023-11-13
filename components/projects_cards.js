@@ -7,7 +7,7 @@ export const addNewProjects = (newProject) => {
           <h5 class="mb-1">${newProject.name}</h5>
           <small>Updated 44 seconds ago</small>
         </div>
-        <p class="mb-1">Private</p>
+        <p class="mb-1 project-status">Private</p>
         <small>${newProject.description}</small>
       </li>
     </ul>

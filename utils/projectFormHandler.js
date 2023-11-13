@@ -50,10 +50,10 @@ export function attachCreateProjectEvent() {
           </div>
           <div class="col-auto">
             <a href="#" class="btn btn-link text-light">
-              3 Open
-            </a> /
+              
+            </a> 
             <a href="#" class="btn btn-link text-light">
-              0 Closed
+              
             </a>
           </div>
         </div>
@@ -67,6 +67,7 @@ export function attachCreateProjectEvent() {
     });
     renderToDom(topDivId, refStuff);
     reinitializeEventListeners();
+    toggleProjectStatus();
   });
   return refStuff;
   return projectArray;
@@ -112,11 +113,9 @@ function updateDisplay(filteredProjects) {
         </div>
         <div class="col-auto">
           <a href="#" class="btn btn-link text-light">
-            3 Open
-          </a> /
+            </a> 
           <a href="#" class="btn btn-link text-light">
-            0 Closed
-          </a>
+            </a>
         </div>
       </div>
     </div>
@@ -130,6 +129,7 @@ function updateDisplay(filteredProjects) {
 
   renderToDom("#topBox", displayContent);
   reinitializeEventListeners();
+  toggleProjectStatus();
 }
 
 function renderAllProjects() {
@@ -147,10 +147,8 @@ function renderAllProjects() {
         </div>
         <div class="col-auto">
           <a href="#" class="btn btn-link text-light">
-            3 Open
-          </a> /
+            </a> 
           <a href="#" class="btn btn-link text-light">
-            0 Closed
           </a>
         </div>
       </div>
@@ -163,8 +161,22 @@ function renderAllProjects() {
   });
   renderToDom("#topBox", allProjectsContent);
   reinitializeEventListeners();
+  toggleProjectStatus();
 }
 
 function reinitializeEventListeners() {
   initializeSearchBarEventListener();
+}
+
+function toggleProjectStatus() {
+  // Attach event listener to each project status element
+  document.querySelectorAll(".project-status").forEach((element) => {
+    element.addEventListener("click", function (event) {
+      if (event.target.innerHTML === "Private") {
+        event.target.innerHTML = "Public";
+      } else {
+        event.target.innerHTML = "Private";
+      }
+    });
+  });
 }
