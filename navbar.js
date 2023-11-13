@@ -1,31 +1,18 @@
-
 import { renderToDom } from "../utils/renderToDom.js";
 import { newProjectForm } from "../components/new_projects_form.js";
-import { pinnedRepoForm } from "../components/pinned_repo_form.js";
+import { attachCreateProjectEvent } from "./utils/projectFormHandler.js";
 
-renderToDom = (divId, html) => {
-  const selectedDiv = document.querySelector(divId);
-  selectedDiv.innerHTML = html;
-};
+const topDiv = "#topBox";
+const bottomDiv = "#bottomBox";
 
-
-const topDiv = document.querySelector('#topBox');
-const bottomDiv = document.querySelector('#bottomBox');
-
-document.querySelector('.navbar').addEventListener('click', (e) => {
-  if (e.target.id.includes('overview')) { 
-    renderToDom('#topBox', newProjectForm); 
-    renderToDom('#bottomBox', pinnedRepoForm);
-    console.log("overview clicked")
-  } else if (e.target.classList.contains('repositories')) {
-    renderToDom(topDiv, newProjectForm); 
+document.querySelector(".navbar").addEventListener("click", (e) => {
+  console.log("Clicked element:", e.target);
+  if (e.target.classList.contains("projects")) {
+    console.log("Project link clicked");
     renderToDom(bottomDiv, newProjectForm);
-  } else if (e.target.classList.contains('project')) {
-    renderToDom(topDiv, newProjectForm);
-    renderToDom(bottomDiv, newProjectForm);
-  } else if (e.target.classList.contains('packages')) {
-    renderToDom(topDiv, newProjectForm);
-    renderToDom(bottomDiv, newProjectForm);
+    attachCreateProjectEvent();
+    // next if statement
+  } else {
+    console.log("Other link in navbar clicked");
   }
-  console.log("got clicked")
 });

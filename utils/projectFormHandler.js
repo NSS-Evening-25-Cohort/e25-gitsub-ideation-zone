@@ -36,27 +36,30 @@ export function attachCreateProjectEvent() {
     // renderToDom(topDivId, projectsCards);
     // const renderCards = (array) => {
     let refStuff = `<div class="container mt-3">
-    <div class="card">
-      <div class="card-header">
+    <div class="card bg-dark text-light">
+      <div class="card-header bg-dark">
         <div class="row">
           <div class="col">
             <input
               type="text"
               class="form-control"
               placeholder="Search all projects"
-            ></input>
+              style="color: white; background-color: black;"
+            />
           </div>
           <div class="col-auto">
-            <a href="#" class="btn btn-link">
+            <a href="#" class="btn btn-link text-light">
               3 Open
-            </a>{" "}
-            /
-            <a href="#" class="btn btn-link">
+            </a> /
+            <a href="#" class="btn btn-link text-light">
               0 Closed
             </a>
           </div>
         </div>
-      </div>`;
+      </div>
+    </div>
+  </div>
+  `;
 
     projectArray.forEach((item) => {
       refStuff += addNewProjects(item);
