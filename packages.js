@@ -3,19 +3,19 @@ import { renderToDom } from "../utils/renderToDom";
 
 const packages = [
   {
-    id = 1,
-    title = "Apache",
-    desc = "This is a description"
+    id : 1,
+    title : "Apache",
+    desc : "This is a description"
   },
   {
-    id = 2,
-    title = "Sioux",
-    desc = "This is another description"
-  }
+    id : 2,
+    title : "Sioux",
+    desc : "This is another description"
+  },
   {
-    id = 3,
-    title = "Iroqious",
-    desc = "This is yet another description"
+    id : 3,
+    title : "Iroqious",
+    desc : "This is yet another description"
   },
 ];
 
@@ -28,7 +28,7 @@ const bottomBox = "#bottomBox";
 const renderPackages = (packages) => {
   let domString = "";
 
-    for (const package of packages) {
+    for (const packageArray of packages) {
       domString += ` <div class = "package-card-container">
       <div class="card">
       <h2>Title</h2>
