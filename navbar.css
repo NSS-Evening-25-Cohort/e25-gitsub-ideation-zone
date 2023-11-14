@@ -29,10 +29,8 @@ justify-content: top;
 }
 
 #topBox {
- display: flex;
- /* flex-basis: 50%; */
- flex-wrap: wrap; */
- /* padding: 9px; */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #pinnedRepoCard {
