@@ -36,7 +36,7 @@ const renderRepositories = (repos) => {
 
   for (const repo of repos) {
     domString += `
-      <div class="card" style="width: 29rem;background-color: rgb(13,17,23);color:rgb(139,148,158); border-bottom: solid  rgb(33,39,44);">
+      <div class="packages-card" id = style="width: 29rem;background-color: rgb(13,17,23);color:rgb(139,148,158); border-bottom: solid  rgb(33,39,44);">
         <div class="card-body">
           <a href="">${repo.reponame}</a>
           <p class="card-text">${repo.description}</p>
@@ -48,7 +48,7 @@ const renderRepositories = (repos) => {
 };
 
 const renderCreateRepoForm = () => {
-  const formHTML = `
+  const packagesForm = `
     <form id="repoForm">
       <div class="mb-3">
         <label for="repo name" class="form-label">Create a new repository</label>
