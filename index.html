@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="packages.css">
+  </head>
+  <body>
+    <div id="container">
+      <div id="Profile"></div>
+      <div id="mainpage">
+        <nav>
+          <div id="navbarButtons" class="navbar">
+            <a class="active overview" href="#" id="overview">overview</a>
+            <a href="#" id="repositories" class="repositories">repositories</a>
+            <a href="#" class="projects" id="projects">projects</a>
+            <a href="#" class="packages" id="packages">packages</a>
+          </div>
+        </nav>
+        <div class="topBox" id="topBox"></div>
+        <div id="bottomBox"></div>
+    </div>
+ 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="overview.js"></script>
+    <script type="module" src="repo.js"></script>
+    <script type="module" src="components/projects_cards.js"></script>
+    <script type="module" src="utils/projectFormHandler.js"></script>
+    <script type="module" src="navbar.js"></script>
+    <script type="module" src="data.js"></script>
+  </body>
+  <footer id="footer"></footer>
+</html>

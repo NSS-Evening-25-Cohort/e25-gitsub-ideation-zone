@@ -1,0 +1,40 @@
+
+.navbar {
+  width: 100%;
+  background-color: rgb(13,17,23);
+  overflow: auto;
+justify-content: top;
+}
+
+
+.navbar a {
+  text-align: center;
+  text-decoration: none;
+  padding: 12px;
+  color: rgb(94, 90, 90);
+  font-size: 15px;
+}
+
+
+.navbar a:hover {
+  background-color: #3f3e3e;
+  border-radius: 5px;
+  color: white;
+}
+
+
+.active {
+  border-bottom: solid 2px red;
+  color: white;
+}
+
+#topBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#pinnedRepoCard {
+  width: 100%;
+  margin: 5px;
+  background-color: rgb(13,17,23);
+}
